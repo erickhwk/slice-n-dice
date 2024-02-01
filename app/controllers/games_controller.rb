@@ -66,7 +66,25 @@ class GamesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def game_params
-      params.require(:game).permit(:title, :system, :description, :themes, :image, :session_min_duration, :session_max_duration, :player_age_range, :price, :safety_details, :combat, :exploration, :roleplay, :experience, :platforms, :books_allowed, :player_preparation)
+      params.require(:game).permit(:title,  
+                                   :system, 
+                                   :description, 
+                                   :image, 
+                                   :session_min_duration, 
+                                   :session_max_duration, 
+                                   :player_age_range, 
+                                   :price, 
+                                   :safety_details, 
+                                   :combat, 
+                                   :exploration, 
+                                   :roleplay, 
+                                   :experience, 
+                                   :books_allowed, 
+                                   :player_preparation,
+                                   :homebrew_allowed,
+                                   themes: [],
+                                   platforms: []
+                                   )
     end
 
     def set_game_systems

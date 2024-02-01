@@ -28,7 +28,7 @@
 
   <div class="my-5">
     <%= form.label :themes %>
-    <%= form.select :themes, @game_themes, { include_blank: 'Please select', multiple: true }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :themes, @game_themes, { include_hidden: false, multiple: true }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
@@ -83,13 +83,20 @@
 
   <div class="my-5">
     <%= form.label :platforms %>
-    <%= form.select :platforms, @game_platforms, { include_blank: 'Please select', multiple: true }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :platforms, @game_platforms, { include_hidden: false, multiple: true }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
     <%= form.label :books_allowed %>
     <%= form.text_area :books_allowed, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
+
+  <div class="my-5">
+    <%= form.label :homebrew_allowed %>
+    <%= form.check_box :homebrew_allowed, class: "form-checkbox h-6 w-6 text-blue-500 border-gray-300 rounded-md checked:bg-blue-500 checked:border-transparent" %>
+  </div>
+
+
 
   <div class="my-5">
     <%= form.label :player_preparation %>

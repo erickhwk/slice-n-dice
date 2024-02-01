@@ -17,7 +17,7 @@ class CreateGames < ActiveRecord::Migration[7.1]
       t.string :experience
       t.text :platforms, array: true, default: []
       t.text :books_allowed
-      t.boolean :accepts_homebrew, default: false
+      t.boolean :homebrew_allowed, default: false
       t.text :player_preparation
 
       t.timestamps

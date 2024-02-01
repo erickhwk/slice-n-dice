@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_01_222245) do
     t.string "experience"
     t.text "platforms", default: [], array: true
     t.text "books_allowed"
-    t.boolean "accepts_homebrew", default: false
+    t.boolean "homebrew_allowed", default: false
     t.text "player_preparation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
