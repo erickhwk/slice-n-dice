@@ -28,7 +28,7 @@
 
   <div class="my-5">
     <%= form.label :themes %>
-    <%= form.select :themes, @game_themes, { include_hidden: false, multiple: true }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :themes, @game_themes, { include_hidden: false, multiple: true }, { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", data: { controller: "slim"} } %>
   </div>
 
   <div class="my-5">
@@ -83,7 +83,7 @@
 
   <div class="my-5">
     <%= form.label :platforms %>
-    <%= form.select :platforms, @game_platforms, { include_hidden: false, multiple: true }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :platforms, @game_platforms, { include_hidden: false, multiple: true }, { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", data: { controller: "slim"} } %>
   </div>
 
   <div class="my-5">
