@@ -1,0 +1,92 @@
+<div id="<%= dom_id game %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= game.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">System:</strong>
+    <%= game.system %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= game.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Themes:</strong>
+    <%= game.themes %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Image:</strong>
+    <%= game.image %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Session min duration:</strong>
+    <%= game.session_min_duration %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Session max duration:</strong>
+    <%= game.session_max_duration %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Player age range:</strong>
+    <%= game.player_age_range %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Price:</strong>
+    <%= game.price %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Safety details:</strong>
+    <%= game.safety_details %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Combat:</strong>
+    <%= game.combat %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Exploration:</strong>
+    <%= game.exploration %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Roleplay:</strong>
+    <%= game.roleplay %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Experience:</strong>
+    <%= game.experience %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Platforms:</strong>
+    <%= game.platforms %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Books allowed:</strong>
+    <%= game.books_allowed %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Player preparation:</strong>
+    <%= game.player_preparation %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this game", game, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this game", edit_game_path(game), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
