@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: %i[ show edit update destroy ]
+  before_action :set_game_data, only: %i[ new edit ]
 
   # GET /games or /games.json
   def index
@@ -66,5 +67,77 @@ class GamesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def game_params
       params.require(:game).permit(:title, :system, :description, :themes, :image, :session_min_duration, :session_max_duration, :player_age_range, :price, :safety_details, :combat, :exploration, :roleplay, :experience, :platforms, :books_allowed, :player_preparation)
+    end
+
+    def set_game_systems
+      @game_systems = ["Dungeons & Dragons 5E",
+                       "Pathfinder 2E",
+                       "Call of Cthulhu",
+                       "Cyberpunk 2020", 
+                       "Shadowrun", 
+                       "Vampire: The Masquerade", 
+                       "Warhammer 40K", 
+                       "Star Wars", 
+                       "GURPS", 
+                       "Fate", 
+                       "Savage Worlds",
+                       "World of Darkness", 
+                       "Other"
+                      ]
+    end
+
+    def set_game_themes
+      @game_themes = ["Fantasy",
+                      "Horror",
+                      "Sci-Fi",
+                      "Cyberpunk",
+                      "Steampunk",
+                      "Superhero",
+                      "Western",
+                      "Historical",
+                      "Mystery",
+                      "Thriller",
+                      "Comedy",
+                      "Romance",
+                      "Drama",
+                      "Action",
+                      "Adventure",
+                      "Other"
+                     ]
+    end
+
+    def set_game_platforms
+      @game_platforms = ["FoundryVTT",
+                         "Roll20",
+                         "Fantasy Grounds",
+                         "Discord",
+                         "Zoom",
+                         "Skype",
+                         "Google Meet",
+                         "Tabletop Simulator",
+                         "Tabletopia",
+                         "Other"
+                        ]
+    end
+
+    def set_player_age_ranges
+      @player_age_ranges = ["18+", "13+", "All Ages"]
+    end
+
+    def set_amount_of
+      @amount_of = ["None", "Some", "All"]
+    end
+
+    def set_amount_of_experience
+      @amount_of_experience = ["None", "Beginner", "Intermediate", "Advanced", "Veteran"]
+    end
+
+    def set_game_data
+      set_game_systems
+      set_game_themes
+      set_game_platforms
+      set_player_age_ranges
+      set_amount_of
+      set_amount_of_experience
     end
 end
