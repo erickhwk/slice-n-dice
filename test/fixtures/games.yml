@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  system: MyString
+  description: MyText
+  themes: MyText
+  image: MyString
+  session_min_duration: 1
+  session_max_duration: 1
+  player_age_range: MyString
+  price: 1
+  safety_details: MyText
+  combat: MyString
+  exploration: MyString
+  roleplay: MyString
+  experience: MyString
+  platforms: MyText
+  books_allowed: MyText
+  player_preparation: MyText
+
+two:
+  title: MyString
+  system: MyString
+  description: MyText
+  themes: MyText
+  image: MyString
+  session_min_duration: 1
+  session_max_duration: 1
+  player_age_range: MyString
+  price: 1
+  safety_details: MyText
+  combat: MyString
+  exploration: MyString
+  roleplay: MyString
+  experience: MyString
+  platforms: MyText
+  books_allowed: MyText
+  player_preparation: MyText
